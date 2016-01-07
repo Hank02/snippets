@@ -26,7 +26,7 @@ def put(name, snippet):
     except psycopg2.IntegrityError as e:
         # "undo" to get db back to original state
         connection.rollback()
-        # overwrite snippet
+        # SQL command to overwrite snippet
         command = "update snippets set message=%s where keyword=%s"
         # run the command on the database passing command and name/snippet pair as tuple
         cursor.execute(command, (name, snippet))
@@ -42,14 +42,12 @@ def put(name, snippet):
 def get(name):
     # message to log
     logging.info("Retrieving {!r} from databse".format(name))
-    # create cursor object - allows SQL commands in Postgre session
-    cursor = connection.cursor()
-    # create string with SQL command and one place holder
-    command = "select message from snippets where keyword=%s"
-    # run the command on the database passing the name as key and return snippet
-    cursor.execute(command, (name,))
-    # *************?
-    row = cursor.fetchone()
+    # connect wile creating cursor object - allows SQL commands in Postgre session
+    with connection, connection.cursor() as cursor:
+        # execute SQL command with place holder
+        cursor.execute("select message from snippets where keyword=%s", (name,))
+        # store in variable
+        row = cursor.fetchone()
     # if no snippet was found with that name
     if not row:
         return "404: Snippet not found"
