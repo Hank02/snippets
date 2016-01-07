@@ -17,10 +17,19 @@ def put(name, snippet):
     logging.info("Storing snippet {!r}: {!r}".format(name, snippet))
     # create cursor object - allows SQL commands in Postgre session
     cursor = connection.cursor()
-    # create string with SQL command and two placeholders
-    command = "insert into snippets values (%s, %s)"
-    # run the command on the database passing command and name/snippet pair as tuple
-    cursor.execute(command, (name, snippet))
+    # make sure snippet name doesn't already exist
+    try:
+        # create string with SQL command and two placeholders
+        command = "insert into snippets values (%s, %s)"
+        # run the command on the database passing command and name/snippet pair as tuple
+        cursor.execute(command, (name, snippet))
+    except psycopg2.IntegrityError as e:
+        # "undo" to get db back to original state
+        connection.rollback()
+        # overwrite snippet
+        command = "update snippets set message=%s where keyword=%s"
+        # run the command on the database passing command and name/snippet pair as tuple
+        cursor.execute(command, (name, snippet))
     # save changes to db
     connection.commit()
     # message to log
@@ -41,6 +50,9 @@ def get(name):
     cursor.execute(command, (name,))
     # *************?
     row = cursor.fetchone()
+    # if no snippet was found with that name
+    if not row:
+        return "404: Snippet not found"
     # return the first element of the row tuple
     return row[0]
 

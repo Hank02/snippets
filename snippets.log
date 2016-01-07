@@ -79,3 +79,39 @@ DEBUG:root:Databse connection established
 INFO:root:Storing snippet 'Foo': 'Somethin else'
 DEBUG:root:Snippet stored successfully.
 INFO:root:Retrieving 'Foo' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Bar' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Foo' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Foo' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'bar' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'Test': 'Another test'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'Test': 'Another test'
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'Test': 'Another test'
+DEBUG:root:Snippet stored successfully.
