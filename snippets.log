@@ -115,3 +115,36 @@ INFO:root:Construction parser
 DEBUG:root:Constructing put subparser
 INFO:root:Storing snippet 'Test': 'Another test'
 DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'Bar': 'Some important text goes here'
+DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Bar' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'Bar': 'Some important text goes here!'
+DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Bar' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'Bar': 'Some important text goes HERE too'
+DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Bar' from databse
