@@ -8,3 +8,74 @@ INFO:root:Construction parser
 DEBUG:root:Constructing put subparser
 INFO:root:Construction parser
 DEBUG:root:Constructing put subparser
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+ERROR:root:FIXME: Unimplemented - get('list')
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+ERROR:root:FIXME: Unimplemented - put 'list', 'A sequence of things'
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+ERROR:root:FIXME: Unimplemented - get('list')
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'Test': 'This is a test'
+DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Test' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Test' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Test' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Test' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Test' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Test' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Test' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Test' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Test' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Storing snippet 'Foo': 'Somethin else'
+DEBUG:root:Snippet stored successfully.
+INFO:root:Retrieving 'Foo' from databse
