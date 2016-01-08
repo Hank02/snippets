@@ -24,6 +24,8 @@ def put(name, snippet):
             command = "insert into snippets values (%s, %s)"
             # run the command on the database passing command and name/snippet pair as tuple
             cursor.execute(command, (name, snippet))
+            # save changes to db
+            connection.commit()
         except psycopg2.IntegrityError as e:
             # "undo" to get db back to original state
             connection.rollback()
@@ -31,11 +33,12 @@ def put(name, snippet):
             command = "update snippets set message=%s where keyword=%s"
             # run the command on the database passing command and name/snippet pair as tuple
             cursor.execute(command, (snippet, name))
-        # save changes to db
-        connection.commit()
+            # save changes to db
+            connection.commit()
     # message to log
     logging.debug("Snippet stored successfully.")
     return name, snippet
+
 
 
 # function that retreives a snippet with the name provided
