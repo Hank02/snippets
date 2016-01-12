@@ -67,6 +67,20 @@ def catalog():
     # return keywords
     return keys
 
+# function that searches for a target string in all the snippets and returns name/snippet
+def search(target):
+    # message to log
+    logging.info("Searching for {!r} within snipperts".format(target))
+    # connect while creating cursor object - allows SQL commands in Postgre session
+    with connection, connection.cursor() as cursor:
+        # ececute SQL command
+        cursor.execute("select * from snippets where message like '%%'||%s||'%%'", (target,))
+        # store in variable
+        matches = cursor.fetchall()
+    # return mathces
+    return matches
+    
+
 
 
 def main():
@@ -89,11 +103,17 @@ def main():
     # subparser for catalog command (takes no arguments)
     catalog_parser = subparsers.add_parser("catalog", help = "Retrieve list of keywords")
     
+    # subpraser for search commend
+    search_parser = subparsers.add_parser("search", help = "Search for string in snippets")
+    search_parser.add_argument("target", help = "String of text to search within snippets")
+    
     arguments = parser.parse_args(sys.argv[1:])
     
     # convert arguments from Namespace to dictionary
     arguments = vars(arguments)
     command = arguments.pop("command")
+    
+    # run command and print
     if command == "put":
         name, snippet = put(**arguments)
         print("Stored {!r} as {!r}".format(snippet, name))
@@ -101,10 +121,15 @@ def main():
         snippet = get(**arguments)
         print("Retreived snippet: {!r}".format(snippet))
     elif command == "catalog":
-        name = catalog()
+        names = catalog()
         print("Available keywords:")
-        for each in name:
+        for each in names:
             print(each[0])
+    elif command == "search":
+        hits = search(**arguments)
+        print("Matches found:")
+        for each in hits:
+            print(each[0] + ": " + each[1])
     
 
 if __name__ == "__main__":
