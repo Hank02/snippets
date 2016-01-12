@@ -54,6 +54,19 @@ def get(name):
     # return the first element of the row tuple
     return row[0]
 
+# function that retreives a list of all the keywords stored in database
+def catalog():
+    # messafe to log
+    logging.info("Retrieving keyword list from database")
+    # connect while creating cursor object - allows SQL commands in Postgre session
+    with connection, connection.cursor() as cursor:
+        # execute SQL command
+        cursor.execute("select keyword from snippets order by keyword")
+        # store in variable
+        keys = cursor.fetchall()
+    # return keywords
+    return keys
+
 
 
 def main():
@@ -73,6 +86,9 @@ def main():
     get_parser = subparsers.add_parser("get", help = "Retrieve a snippet")
     get_parser.add_argument("name", help = "The name of the desired snippet")
     
+    # subparser for catalog command (takes no arguments)
+    catalog_parser = subparsers.add_parser("catalog", help = "Retrieve list of keywords")
+    
     arguments = parser.parse_args(sys.argv[1:])
     
     # convert arguments from Namespace to dictionary
@@ -84,6 +100,11 @@ def main():
     elif command == "get":
         snippet = get(**arguments)
         print("Retreived snippet: {!r}".format(snippet))
+    elif command == "catalog":
+        name = catalog()
+        print("Available keywords:")
+        for each in name:
+            print(each[0])
     
 
 if __name__ == "__main__":
