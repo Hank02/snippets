@@ -413,3 +413,254 @@ DEBUG:root:Databse connection established
 INFO:root:Construction parser
 DEBUG:root:Constructing put subparser
 INFO:root:Retrieving keyword list from database
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'another': 'hide this!' hidden = False
+DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'another': 'hide this!' hidden = False
+DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'another': 'hide this!' hidden = True
+DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'fooBar': 'More notes and table' hidden = False
+DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'fooBar': 'More notes and table' hidden = True
+DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'fooBar': 'hello world' hidden = False
+DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Foo' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Searching for 'table' within snipperts
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Searching for 'table' within snipperts
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving keyword list from database
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'hello': 'this is a message text' hidden = False
+DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'hello' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving keyword list from database
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Searching for 'message' within snipperts
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Searching for 'message' within snipperts
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Searching for 'message' within snipperts
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Searching for 'message' within snipperts
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving keyword list from database
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving keyword list from database
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Searching for 'this' within snipperts
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Searching for 'text' within snipperts
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Setting Hidden column to 'Bar' in 'True'
+DEBUG:root:Snippet updated succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Storing snippet 'Others': 'text text and more text' hidden = False
+DEBUG:root:Snippet stored successfully.
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving 'Others' from databse
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving keyword list from database
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Searching for 'text' within snipperts
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Setting Hidden column to 'Test' in 'True'
+DEBUG:root:Snippet updated succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Setting Hidden column to 'another' in 'False'
+DEBUG:root:Snippet updated succesfully

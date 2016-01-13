@@ -12,30 +12,30 @@ logging.debug("Databse connection established")
 
 
 # function that stores a snippet with an associated name
-def put(name, snippet):
+def put(name, snippet, hide = False):
     # message to log
-    logging.info("Storing snippet {!r}: {!r}".format(name, snippet))
+    logging.info("Storing snippet {!r}: {!r} hidden = {!r}".format(name, snippet, hide))
     # create cursor object - allows SQL commands in Postgre session
-    
     with connection, connection.cursor() as cursor:
         # make sure snippet name doesn't already exist
         try:
             # create string with SQL command and two placeholders
-            command = "insert into snippets values (%s, %s)"
+            command = "insert into snippets values (%s, %s, %s)"
             # run the command on the database passing command and name/snippet pair as tuple
-            cursor.execute(command, (name, snippet))
+            cursor.execute(command, (name, snippet, hide))
         except psycopg2.IntegrityError as e:
             # "undo" to get db back to original state
             connection.rollback()
             # SQL command to overwrite snippet
-            command = "update snippets set message=%s where keyword=%s"
+            command = "update snippets set message=%s, hidden=%s where keyword=%s"
             # run the command on the database passing command and name/snippet pair as tuple
-            cursor.execute(command, (snippet, name))
+            cursor.execute(command, (snippet, hide, name))
         # save changes to db
         connection.commit()
     # message to log
     logging.debug("Snippet stored successfully.")
-    return name, snippet
+    return name, snippet, hide
+
 
 
 # function that retreives a snippet with the name provided
@@ -61,7 +61,7 @@ def catalog():
     # connect while creating cursor object - allows SQL commands in Postgre session
     with connection, connection.cursor() as cursor:
         # execute SQL command
-        cursor.execute("select keyword from snippets order by keyword")
+        cursor.execute("select keyword from snippets where not hidden order by keyword")
         # store in variable
         keys = cursor.fetchall()
     # return keywords
@@ -74,12 +74,25 @@ def search(target):
     # connect while creating cursor object - allows SQL commands in Postgre session
     with connection, connection.cursor() as cursor:
         # ececute SQL command
-        cursor.execute("select * from snippets where message like '%%'||%s||'%%'", (target,))
+        cursor.execute("select * from snippets where not hidden AND message like '%%'||%s||'%%'", (target,))
         # store in variable
         matches = cursor.fetchall()
     # return mathces
     return matches
-    
+
+# function that toggles "hide" column to true or false
+def hide(name, flag):
+    # message to log
+    logging.info("Setting Hidden column to {!r} in {!r}".format(name, flag))
+    # connect while creating cursor object - allows SQL commands in Postgre session
+    with connection, connection.cursor() as cursor:
+        # execute SQL command
+        cursor.execute("update snippets set hidden=%s where keyword=%s", (flag, name))
+    # save changes to db
+    connection.commit()
+    # message to log
+    logging.debug("Snippet updated succesfully")
+    return name, flag
 
 
 
@@ -95,6 +108,7 @@ def main():
     put_parser = subparsers.add_parser("put", help = "Store a snippet")
     put_parser.add_argument("name", help = "The name of the snippet")
     put_parser.add_argument("snippet", help = "The snippet of text")
+    put_parser.add_argument("--hide", help = "Optional to hide snippet, default = false", action = "store_true")
     
     # subparser for get command
     get_parser = subparsers.add_parser("get", help = "Retrieve a snippet")
@@ -103,9 +117,14 @@ def main():
     # subparser for catalog command (takes no arguments)
     catalog_parser = subparsers.add_parser("catalog", help = "Retrieve list of keywords")
     
-    # subpraser for search commend
+    # subpraser for search command
     search_parser = subparsers.add_parser("search", help = "Search for string in snippets")
     search_parser.add_argument("target", help = "String of text to search within snippets")
+    
+    # subpraser for hide command
+    hide_parser = subparsers.add_parser("hide", help = "Toggles hide column to true or false")
+    hide_parser.add_argument("name", help = "Name of snippet to edit")
+    hide_parser.add_argument("flag", choices = ["True", "False"], help = "Can be True or False")
     
     arguments = parser.parse_args(sys.argv[1:])
     
@@ -115,8 +134,11 @@ def main():
     
     # run command and print
     if command == "put":
-        name, snippet = put(**arguments)
-        print("Stored {!r} as {!r}".format(snippet, name))
+        name, snippet, hidden = put(**arguments)
+        if hidden == True:
+            print("Stored {!r} hidden as {!r}".format(snippet, name))
+        else:
+            print("Stored {!r} as {!r}".format(snippet, name))
     elif command == "get":
         snippet = get(**arguments)
         print("Retreived snippet: {!r}".format(snippet))
@@ -130,7 +152,11 @@ def main():
         print("Matches found:")
         for each in hits:
             print(each[0] + ": " + each[1])
+    elif command == "hide":
+        name, flag = hide(**arguments)
+        print("Hide column of {!r} set to {!r}".format(name, flag))
     
+
 
 if __name__ == "__main__":
     main()
