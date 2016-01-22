@@ -664,3 +664,24 @@ INFO:root:Construction parser
 DEBUG:root:Constructing put subparser
 INFO:root:Setting Hidden column to 'another' in 'False'
 DEBUG:root:Snippet updated succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Retrieving keyword list from database
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Setting Hidden column to 'another' in 'True'
+DEBUG:root:Snippet updated succesfully
+DEBUG:root:Connecting to PostgreSQL
+DEBUG:root:Databse connection established
+INFO:root:Construction parser
+DEBUG:root:Constructing put subparser
+INFO:root:Setting Hidden column to 'another' in 'True'
+DEBUG:root:Snippet updated succesfully

@@ -127,6 +127,8 @@ def main():
     hide_parser.add_argument("flag", choices = ["True", "False"], help = "Can be True or False")
     
     arguments = parser.parse_args(sys.argv[1:])
+    print(arguments)
+    print(sys.argv[1:])
     
     # convert arguments from Namespace to dictionary
     arguments = vars(arguments)
